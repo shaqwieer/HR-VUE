@@ -1,14 +1,14 @@
 <template>
   <div
-    class="surface-500 h-screen flex justify-content-center align-items-center"
+    class="surface-500 h-screen flex  justify-content-center align-items-center"
   >
-    <div class="grid surface-100 w-7 h-30rem">
-      <div class="col-5 background bg-cover bg-no-repeat bg-center"></div>
+    <div class="grid surface-100 w-10 md:w-7 md:h-30rem">
+      <div class=" md:col-5 hidden md:flex background bg-cover bg-no-repeat bg-center"></div>
       <div
-        class="col-7 flex justify-content-center align-items-center flex-column"
+        class="md:col-7 flex justify-content-center align-items-center flex-column"
       >
-        <div class="mb-6">
-          <h1>المنظومة الرئيسية لمتابعة الافراد</h1>
+        <div class="mb-4 md:mb-6 mr-3 text-sm md:text-lg ">
+          <h1 class="px-4  md:px-1">المنظومة الرئيسية لمتابعة الافراد</h1>
         </div>
         <!-- note:form designed finish but not functional -->
         <form action="">
@@ -40,7 +40,7 @@
             <InputSwitch v-model="checked" class="pt-3rem" />
           </div>
           <Button
-            class="w-8 ml-5 mt-4 surface-700 border-none"
+            class="w-6 md:w-8 mb-4 mr-7 ml-5 mt-4 surface-700 border-none"
             label="تسجيل الدخول"
             @click="auth()"
           />
@@ -71,7 +71,7 @@ export default {
     const router = useRouter();
     const passwordValue = ref(null);
     const store = useStore();
-    const authAdmin = { userName: "shaqwieer", password: "123456" };
+    const authAdmin = { userName: "admin", password: "admin" };
     const checkBox = ref(false);
     const authValue = ref(false);
     const checked = computed({
