@@ -1,11 +1,11 @@
 <template>
-  <div
-    class="surface-100 w-12 flex justify-content-between align-items-center flex-wrap flex-row"
+   <div
+    class="surface-100 w-12 flex justify-content-between  align-items-center flex-nowrap "
   >
-    <div class="inline-flex gap-6 mr-3">
-      <img src="../../assets/logo.png" alt="" class="w-3rem h-3rem mt-2" />
+    <div class="inline-flex md:gap-6 mr-3">
+      <img src="../../assets/logo.png" alt="" class="hidden md:flex w-3rem h-3rem mt-2" />
 
-      <h2 class="mt-3 text-xl ml-4">
+      <h2 class="mt-3 text-sm md:text-xl ml-4">
         الصفحة
         <span class="inline bg-orange-400 shadow-5 w-full border-round-xl"
           >الرئيسية</span
@@ -14,9 +14,9 @@
       </h2>
     </div>
 
-    <div>
-      <div class="card flex justify-content-between">
-        <InputSwitch v-model="checked" class="ml-5 mt-2 pb-1" />
+   
+      <div class=" flex justify-content-end md:gap-3">
+        <InputSwitch  v-model="checked" class="md:ml-5 mt-2 hidden md:flex " />
         <div>
           <Button
             type="button"
@@ -24,7 +24,7 @@
             aria-haspopup="true"
             aria-controls="overlay_menu"
             :icon="'pi pi-user'"
-            class="surface-200 ml-5 w-5rem mt-2"
+            class="surface-200 ml-2 md:ml-5 w-3rem md:w-5rem mt-1"
             text
             size="small"
           />
@@ -52,26 +52,27 @@
           </Menu>
         </div>
       </div>
-    </div>
-    <Divider />
+   
+    <!-- <Divider /> -->
   </div>
-  <div class="surface-200 h-screen flex justify-content-between">
+
+  <div class="surface-200 h-screen md:flex md:justify-content-between">
     <div
-      class="flex flex-column justify-content-start align-items-start w-8 mr-6 mt-6"
+      class="flex flex-column justify-content-start align-items-start md:w-8 md:mr-6 md:mt-6"
     >
       <p
-        class="text-lg font-semibold mr-6 bg-orange-400 shadow-6 w-2 border-round-xl pr-4 pt-2 pb-2"
+        class="text-lg font-semibold md:mr-6 bg-orange-400 shadow-6 md:w-2 border-round-xl pr-4 pt-2 pb-2"
       >
         الصورة الشخصية
       </p>
       <div class="w-12 flex justify-content-between">
         <img
           src="../../assets/AvatarMaker.png"
-          class="w-3 h-3 border-round-xl shadow-6"
+          class="w-4 md:w-3 h-3 border-round-xl shadow-6"
           alt=""
         />
         <div
-          class="w-7 surface-100 h-3 border-round-xl shadow-6 flex flex-column justify-content-center pr-5"
+          class="w-6 ml-2 md:w-7 surface-100 h-3 border-round-xl shadow-6 flex flex-column justify-content-center pr-5"
         >
           <p class="text-base font-semibold">
             رقم السرى:
@@ -80,7 +81,7 @@
           <Button
             label="قائمة الموظفين"
             severity="secondary"
-            class="w-5 mt-4 mx-auto"
+            class=" w-10 md:w-5 md:mt-4 mx-auto"
             @click="mainPage()"
           />
         </div>
@@ -115,8 +116,8 @@
         </div>
       </div>
     </div>
-    <div class="flex justify-content-end align-items-start w-4">
-      <Sidebar v-model:visible="visible" position="left">
+    <div class="flex justify-content-end align-items-start md:w-4">
+      <Sidebar v-model:visible="visible" class="w-12rem md:w-30rem" position="left">
         <h2>بيانات الموظف</h2>
         <div class="flex flex-column gap-5">
           <Button
@@ -148,7 +149,7 @@
       </Sidebar>
       <Button
         label="اظهار  بيانات الموظف"
-        class="ml-5 mt-5"
+        class="ml-8 md:ml-5 mt-5 "
         severity="secondary"
         @click="visible = true"
       />

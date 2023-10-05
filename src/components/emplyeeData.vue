@@ -22,9 +22,10 @@
     >
       <template #header>
         <div class="flex justify-content-between align-items-center">
-          <span class="p-input-icon-left">
+          <span class="p-input-icon-left hidden lg:flex">
             <i class="pi pi-search" />
             <InputText
+            
               v-model="filters['global'].value"
               placeholder="بحث عام "
             />
@@ -33,7 +34,7 @@
             label="اضافة"
             icon="pi pi-plus"
             severity="success"
-            class="mr-5 w-10rem"
+            class="mr-5 ml-2 w-10rem"
             @click="openNew"
           />
           <Button

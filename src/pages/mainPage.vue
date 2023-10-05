@@ -1,11 +1,11 @@
 <template>
   <div
-    class="surface-100 w-12 flex justify-content-between align-items-center flex-wrap flex-row"
+    class="surface-100 w-12 flex justify-content-between  align-items-center flex-nowrap "
   >
-    <div class="inline-flex gap-6 mr-3">
-      <img src="../../assets/logo.png" alt="" class="w-3rem h-3rem mt-2" />
+    <div class="inline-flex md:gap-6 mr-3">
+      <img src="../../assets/logo.png" alt="" class="hidden md:flex w-3rem h-3rem mt-2" />
 
-      <h2 class="mt-3 text-xl ml-4">
+      <h2 class="mt-3 text-sm md:text-xl ml-4">
         الصفحة
         <span class="inline bg-orange-400 shadow-5 w-full border-round-xl"
           >الرئيسية</span
@@ -14,9 +14,9 @@
       </h2>
     </div>
 
-    <div>
-      <div class="card flex justify-content-between">
-        <InputSwitch v-model="checked" class="ml-5 mt-2 pb-1" />
+   
+      <div class=" flex justify-content-end md:gap-3">
+        <InputSwitch  v-model="checked" class="md:ml-5 mt-2 hidden md:flex " />
         <div>
           <Button
             type="button"
@@ -24,7 +24,7 @@
             aria-haspopup="true"
             aria-controls="overlay_menu"
             :icon="'pi pi-user'"
-            class="surface-200 ml-5 w-5rem mt-2"
+            class="surface-200 ml-2 md:ml-5 w-3rem md:w-5rem mt-1"
             text
             size="small"
           />
@@ -52,30 +52,30 @@
           </Menu>
         </div>
       </div>
-    </div>
-    <Divider />
+   
+    <!-- <Divider /> -->
   </div>
   <div
-    class="surface-200 h-full w-12 flex justify-content-start align-items-start flex-wrap flex-row"
+    class="surface-200 h-full w-12 flex justify-content-start align-items-start flex-nowrap flex-row"
   >
-    <TabView class="tabview-custom w-12">
-      <TabPanel>
+    <TabView class="tabview-custom w-12 h-screen">
+      <TabPanel >
         <template #header>
           <i class="pi pi-user mr-2"></i>
           <span>البيانات الشخصية</span>
         </template>
         <employeeData></employeeData>
       </TabPanel>
-      <TabPanel>
+      <TabPanel >
         <template #header>
-          <span>الجزاءات</span>
+          <span>جزاءات الافراد</span>
           <i class="pi pi-paperclip mr-2"></i>
         </template>
         <punishMent></punishMent>
       </TabPanel>
-      <TabPanel>
+      <TabPanel >
         <template #header>
-          <span>الاجازات</span>
+          <span>اجازات الافراد</span>
           <i class="pi pi-home mr-2"></i>
         </template>
         <vacTion></vacTion>
