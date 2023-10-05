@@ -82,9 +82,7 @@
       </TabPanel>
     </TabView>
   </div>
-  <div class="surface-100 text-center h-5rem pt-3 pb-3">
-    <p>تصميم مركز انتاج البرمجيات الرئيسى &copy;</p>
-  </div>
+ 
 </template>
 
 <script>
